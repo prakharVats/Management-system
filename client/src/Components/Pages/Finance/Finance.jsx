@@ -35,7 +35,7 @@ const Finance = () => {
 
   // fetching settings data
   useEffect(() => {
-      axios.get("http://localhost:3000/finance/getSettings")
+      axios.get("https://management-system-jwp8.onrender.com/finance/getSettings")
         .then((response) => {
           setSettingFields(() => response.data[0]);
         })

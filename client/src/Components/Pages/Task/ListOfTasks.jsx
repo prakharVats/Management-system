@@ -32,7 +32,7 @@ const ListOfTasks = ({data , currentTask , setCurrentTask , form , setForm}) => 
     const timeTaken = prompt("how many hours did you take to complete this task?!");
       try {
         alert("Item updated! Reload page");
-        const response = await axios.post('http://localhost:3000/task/postUpdateTask', {
+        const response = await axios.post('https://management-system-jwp8.onrender.com/task/postUpdateTask', {
             id : `${task._id}`,
             name : `${task.name}`,
             startTime : `${task.startTime}`,

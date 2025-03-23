@@ -71,7 +71,7 @@ const TableRowCompo = ({row , type , setForm , setShow , setAction}) =>{
       setShow(() => ({add: 1, edit: 0, remove: 0 , list : 0, task : 0}))
     }else if(type === "remove"){
       alert("Item removed! Reload page");
-        axios.post('http://localhost:3000/task/removeTask', {
+        axios.post('https://management-system-jwp8.onrender.com/task/removeTask', {
           id : row._id,
         })
         .then(function (response) {

@@ -41,7 +41,7 @@ const Projects = () => {
   })
 
   useEffect(() => {
-    axios.get("http://localhost:3000/project/getProject")
+    axios.get("https://management-system-jwp8.onrender.com/project/getProject")
       .then((response) => {
         setHome((prev) => ({...prev , data : response.data})); // Ensures re-render
       })
@@ -107,7 +107,6 @@ const Projects = () => {
     }
 
   }, [searchbar , folderAndFiles , selected]);
-
 
   return (
    <Box bgcolor="white">

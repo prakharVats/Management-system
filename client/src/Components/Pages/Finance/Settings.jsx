@@ -16,7 +16,7 @@ const Settings = ({settingFields , setSettingFields , setSettings}) => {
             setSettings(() => 0);
             try {
                 alert("Settings updated! Reload page");
-                const response = await axios.post('http://localhost:3000/finance/settingsUpdate', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/finance/settingsUpdate', {
                     id : settingFields._id ,
                     month : settingFields.month,
                     savingGoals : settingFields.savingGoals,

@@ -33,7 +33,6 @@ const Large = ({temp ,  controls , setHome , selected , folderAndFiles , setFold
                     {temp?.selectedData?.map(e => <>{e.type === "folder" ?  <Folder e = {e} setHome={setHome} setFolderAndFiles={setFolderAndFiles} folderAndFiles={folderAndFiles}/> : <Files e = {e} setHome={setHome}/>}</>)}
                 </Box>
             }
-            
         </Box>
     )
 }

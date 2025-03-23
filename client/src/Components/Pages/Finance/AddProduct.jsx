@@ -23,7 +23,7 @@ const AddProduct = ({SetAddEditRemove , formValues , setFormValues , btn}) => {
             SetAddEditRemove((prev) => ({...prev , add : false}));
             try {
                 alert("Item Added! Reload page");
-                const response = await axios.post('http://localhost:3000/finance/postfinancelist', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/finance/postfinancelist', {
                     name : `${formValues.name}`,
                     price : `${formValues.price}`,
                     category : `${formValues.category}`,
@@ -38,7 +38,7 @@ const AddProduct = ({SetAddEditRemove , formValues , setFormValues , btn}) => {
             SetAddEditRemove((prev) => ({...prev , editC : false}));
             try {
                 alert("Item updated! Reload page");
-                const response = await axios.post('http://localhost:3000/finance/postupdate', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/finance/postupdate', {
                     id : `${formValues.id}`,
                     name : `${formValues.name}`,
                     price : `${formValues.price}`,

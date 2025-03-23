@@ -40,7 +40,6 @@ const TaskCard = ({e , setCurrentTask , index , setShowCurrentTask , setTask}) =
                 {/* <BsExclamationCircle style={{height:"130" , width:"130" , color:"#e56a6a" , position:"relative" , top:"-10" , left:"20"}}/> */}
             </Box>
     </Stack>
-    
   )
 }
 

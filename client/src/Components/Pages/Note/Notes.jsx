@@ -34,7 +34,7 @@ const Notes = () => {
 
   // fetching data
   useEffect(() => {
-    axios.get("http://localhost:3000/notes/getNotes")
+    axios.get("https://management-system-jwp8.onrender.com/notes/getNotes")
       .then((response) => {
         setData(() => response.data);
         setTemp(() => response.data);
@@ -44,7 +44,7 @@ const Notes = () => {
 
   // fetching archives
   useEffect(() => {
-    axios.get("http://localhost:3000/notes/getArchives")
+    axios.get("https://management-system-jwp8.onrender.com/notes/getArchives")
       .then((response) => {
         setShowTags(response.data)
       })

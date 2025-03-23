@@ -16,7 +16,7 @@ import axios from "axios"
 function handleAction(action , data , setFormValues , SetAddEditRemove){
   if(action === "remove"){
     alert("Item removed! Reload page");
-    axios.post('http://localhost:3000/finance/removeItem', {
+    axios.post('https://management-system-jwp8.onrender.com/finance/removeItem', {
       id : data._id,
     })
     .then(function (response) {
@@ -42,7 +42,7 @@ export default function DenseTable({setCount , searchbar , addEditRemove , SetAd
   const [temp , setTemp] = useState([]);
   useEffect(() => {
     axios
-      .get('http://localhost:3000/finance/getfinancelist')
+      .get('https://management-system-jwp8.onrender.com/finance/getfinancelist')
       .then((response) => {
         setRows(() => response.data);
         setTemp(() => response.data);

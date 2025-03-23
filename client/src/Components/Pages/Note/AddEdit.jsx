@@ -1,3 +1,4 @@
+// http://localhost:3000
 import { Box, Button, Stack, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { MdFormatListBulletedAdd } from "react-icons/md";
@@ -22,8 +23,9 @@ const AddEdit = ({setMasonry , currentData , createUpdate , setCurrentData , sho
     const handleReq = async(action) => {
         if(action === "Update"){
             try {
+                // https://management-system-jwp8.onrender.com
                 alert("Item updated! Reload page");
-                const response = await axios.post('http://localhost:3000/notes/updateNotes', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/notes/updateNotes', {
                     id : `${currentData._id}`,
                     title : `${currentData.title}`,
                     description : `${currentData.description}`,
@@ -38,7 +40,7 @@ const AddEdit = ({setMasonry , currentData , createUpdate , setCurrentData , sho
         }else if(action === "Create"){
             try {
                 alert("Item Created! Reload page");
-                const response = await axios.post('http://localhost:3000/notes/postAddNotes', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/notes/postAddNotes', {
                     title : `${currentData.title}`,
                     description : `${currentData.description}`,
                     tasks : currentData.tasks,
@@ -52,7 +54,7 @@ const AddEdit = ({setMasonry , currentData , createUpdate , setCurrentData , sho
             
             try {
                 alert("Item Deleted! Reload page");
-                const response = await axios.post('http://localhost:3000/notes/deleteNotes', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/notes/deleteNotes', {
                    id: currentData._id
                 });
             

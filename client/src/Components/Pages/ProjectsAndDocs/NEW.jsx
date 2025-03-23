@@ -17,7 +17,7 @@ const NewFileFolder = ({type , setControls , controls , Home}) => {
   const handleCreate = async () =>{
     try {
       alert("Item Added! Reload page");
-      const response = await axios.post('http://localhost:3000/project/postProject', {
+      const response = await axios.post('https://management-system-jwp8.onrender.com/project/postProject', {
           name : `${name}`,
           belongs : `${Home.key}`,
           type : `${controls.toLowerCase()}`

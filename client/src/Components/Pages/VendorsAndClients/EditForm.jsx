@@ -83,7 +83,7 @@ const EditForm = ({setTags , tags , setEdit , setOpenProfile , addControl , setA
     const handleSubmitDone = async() =>{
         try {
             alert("Item updated! Reload page");
-            const response = await axios.post('http://localhost:3000/clientsAndvendors/postCVUpdate', {
+            const response = await axios.post('https://management-system-jwp8.onrender.com/clientsAndvendors/postCVUpdate', {
                 id : tags[0]._id,
                 array : temptags
             })
@@ -99,7 +99,7 @@ const EditForm = ({setTags , tags , setEdit , setOpenProfile , addControl , setA
         if(action === "Add"){
             try {
                 alert("Item Added! Reload page");
-                const response = await axios.post('http://localhost:3000/clientsAndvendors/postAddCV', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/clientsAndvendors/postAddCV', {
                     name : CurrData.name,
                     title : CurrData.title,
                     tags : CurrData.tags,
@@ -120,7 +120,7 @@ const EditForm = ({setTags , tags , setEdit , setOpenProfile , addControl , setA
         }else if(action === "Update"){
             try {
                 alert("Item updated! Reload page");
-                const response = await axios.post('http://localhost:3000/clientsAndvendors/postUpdateCV', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/clientsAndvendors/postUpdateCV', {
                     id : CurrData._id,
                     name : CurrData.name,
                     title : CurrData.title,
@@ -144,7 +144,7 @@ const EditForm = ({setTags , tags , setEdit , setOpenProfile , addControl , setA
         }else if(action === "Delete"){
             try {
                 alert("Item Deleted! Reload page");
-                const response = await axios.post('http://localhost:3000/clientsAndvendors/postRemoveCV', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/clientsAndvendors/postRemoveCV', {
                     id : CurrData._id,
                 })
                 // window.location.reload(()=> {console.log("refreshed")});
@@ -278,9 +278,6 @@ const EditForm = ({setTags , tags , setEdit , setOpenProfile , addControl , setA
                         <input value={CurrData.email} onChange={(e) => handleTextInputs("email" , e.target.value)} placeholder='Email' type="text" style={{height: "30px", padding: "5px", width: "75%" , paddingLeft:"40px" , marginLeft:"-25px" , border:"1px solid lightgray" , borderRadius:"5px"}}/>
                     </Stack>
                 </Box>
-
-
-
 
                 <Box sx={{ml:"15px"}}>
                     <Typography color='#3d547a' fontSize={13}>Label</Typography>

@@ -13,25 +13,10 @@ const style = {
 
 
 const Complete = ({data = ["" , ""]}) => {
-
-
-    // const highPriorityTasks =  useEffect(() => {
-    //     const d = data.filter(task => task.priority === "high");
-    //     return d;
-    // }, [1000])
-    
-    
-
     const [selected , setSelected] = useState("High");
-    
-
     function handleOnClick(e){
         setSelected(e);
     }
-
-
-
-
 
 // #dbe6f0
   return (

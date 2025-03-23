@@ -135,7 +135,7 @@ const VendorsAndClients = () => {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:3000/clientsAndvendors/getCV")
+    axios.get("https://management-system-jwp8.onrender.com/clientsAndvendors/getCV")
       .then((response) => {
         setTemp(() => response.data);
         const DATA = Object.values(
@@ -156,7 +156,7 @@ const VendorsAndClients = () => {
 
    // fetching archives
    useEffect(() => {
-    axios.get("http://localhost:3000/clientsAndvendors/getCVtags")
+    axios.get("https://management-system-jwp8.onrender.com/clientsAndvendors/getCVtags")
       .then((response) => {
         setTags(response.data);
       })

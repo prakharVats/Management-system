@@ -94,13 +94,7 @@ export default function DenseTable({temp , controls , setHome , selected , folde
               <TableCell align="left" sx={{border:"none"}}>{row.type}</TableCell>
             </TableRow>
           ))}
-
-
         </TableBody>}
-
-
-
-
       </Table>
     </TableContainer>
   );

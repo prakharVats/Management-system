@@ -41,7 +41,7 @@ const AddProduct = ({setShow , setForm , form , action}) => {
             setShow((prev) => ({...prev , add : 0}));
             try {
                 alert("Item Added! Reload page");
-                const response = await axios.post('http://localhost:3000/task/postTask', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/task/postTask', {
                     name : `${form.name}`,
                     startTime : `${form.startTime}`,
                     endTime : `${form.endTime}`,
@@ -61,7 +61,7 @@ const AddProduct = ({setShow , setForm , form , action}) => {
                 remove : 0}));
             try {
                 alert("Item updated! Reload page");
-                const response = await axios.post('http://localhost:3000/task/postUpdateTask', {
+                const response = await axios.post('https://management-system-jwp8.onrender.com/task/postUpdateTask', {
                     id : `${form._id}`,
                     name : `${form.name}`,
                     startTime : `${form.startTime}`,
