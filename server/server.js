@@ -2,9 +2,11 @@ const express = require("express")
 const Cors = require("cors")
 const app = express();
 
+require("dotenv").config();
 // local imports 
 const Router = require("./routers/Router")
 const mongoConnect = require("./utils/Databse").mongoConnect
+
 
 const port = process.env.PORT || 3000;
 

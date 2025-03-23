@@ -1,10 +1,10 @@
 let _db;
 const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
+require("dotenv").config();
 
-// establishing the connection
 const mongoConnect = (callback) =>{
-    MongoClient.connect("mongodb+srv://vatsprakhar91:thisIsTheKey@cluster0.7boro.mongodb.net/ManagementSystem?retryWrites=true&w=majority&appName=Cluster0").then(res => {
+    MongoClient.connect(process.env.ApiKey).then(res => {
         console.log("database connected!");
         _db = res.db();  //storing the connection
         callback();
