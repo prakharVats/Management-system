@@ -230,7 +230,7 @@ function getTimeDifference(time1, time2) {
         {show.edit ? <><Typography sx={{color:"#3d547a" , mt:"15px" , ml:"15px" , fontWeight:"bold"}}>Select an item to edit :</Typography><Table setAction={setAction} setShow={setShow} setForm={setForm} data={data} type="edit"/></>: ""}
         {show.remove ? <><Typography sx={{color:"#3d547a" , mt:"15px" , ml:"15px" , fontWeight:"bold"}}>Select an item to remove :</Typography><Table setShow={setShow} setForm={setForm} data={data} type = "remove"/></>: ""}
         {!show.remove && !show.task && !show.list && !show.add && !show.edit? <Table data={data} type = "normal"/>: ""}
-       </> : "Loading..."}
+       </> : "Takes a while! Loading..."}
         
       </Grid2>
       <Grid2 size={4.5}>
