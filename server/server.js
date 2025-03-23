@@ -22,7 +22,7 @@ app.use("/project" , Router)
 app.use("/notes" , Router)
 app.use("/clientsAndvendors" , Router)
 
-mongoConnect(() => app.listen(3000 , () => {
+mongoConnect(() => app.listen(port , () => {
     console.log("listening at post : http://localhost:3000/");
 })) 
  
