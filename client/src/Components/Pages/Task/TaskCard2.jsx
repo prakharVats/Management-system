@@ -8,6 +8,7 @@ import React from 'react'
 
 // fee2e2 E0E7FF #fff7cc 
 const TaskCard = ({e , setCurrentTask , index , setShowCurrentTask , setTask}) => {
+  
   function handleOnCLick(){
     setCurrentTask(() => index);
     setTask(() => e);

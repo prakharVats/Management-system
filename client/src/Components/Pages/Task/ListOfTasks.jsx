@@ -1,10 +1,10 @@
 import { Box, Button, Stack, Typography } from '@mui/material'
 import DropDown from "./DropDown"
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import TaskCard from './TaskCard'
 import TaskCard2 from './TaskCard2'
 import axios from 'axios'
-
+import imgg from "../../../assets/animation.gif"
 const styling = {
   fontSize:"15px"
 }
@@ -17,15 +17,10 @@ const ListOfTasks = ({data , currentTask , setCurrentTask , form , setForm}) => 
   const [task , setTask] = useState(); 
 
 
-  
-
-
   function handleDrop(){
     setCurrentTask(0);
     setShowCurrentTask(() => 0);
   }
-
-
 
 
   const handleComplete = async() =>{
@@ -94,7 +89,7 @@ const ListOfTasks = ({data , currentTask , setCurrentTask , form , setForm}) => 
                   <Button onClick={handleDrop} variant='contained' sx={{fontSize:"12px" , height:"30px" , textTransform:"none" , ml:"10px" , bgcolor:"#2f4884"}}>Drop</Button>
                 </Stack>
               </Box> 
-              <img style={{marginLeft:"100px" , marginTop:"-20px"}} src="../../../../public/animation.gif" alt="Animated GIF" width="220"/>
+              <img style={{marginLeft:"100px" , marginTop:"-20px"}} src={imgg} alt="Animated GIF" width="220"/>
             </Stack>
 
           </Box>
